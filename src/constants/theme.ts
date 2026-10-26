@@ -1,26 +1,37 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://unistyl.es/), etc.
+ * SignBridge design tokens. Every screen pulls colors from here so light and dark mode stay in sync.
  */
-
-import '@/global.css';
 
 import { Platform } from 'react-native';
 
 export const Colors = {
   light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
+    text: '#0E0F1A',
+    textSecondary: '#5C6070',
+    background: '#F6F6FA',
+    backgroundElement: '#FFFFFF',
+    backgroundSelected: '#ECEDF5',
+    border: '#E2E3EC',
+    primary: '#5B5FEF',
+    primarySoft: '#E7E8FF',
+    onPrimary: '#FFFFFF',
+    success: '#15A05A',
+    successSoft: '#DDF6E8',
+    danger: '#E5484D',
   },
   dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
+    text: '#F4F5FA',
+    textSecondary: '#A3A7B7',
+    background: '#0B0C12',
+    backgroundElement: '#171922',
+    backgroundSelected: '#222533',
+    border: '#2A2D3B',
+    primary: '#7C83FF',
+    primarySoft: '#262A52',
+    onPrimary: '#FFFFFF',
+    success: '#3DD68C',
+    successSoft: '#123524',
+    danger: '#FF6369',
   },
 } as const;
 
@@ -60,6 +71,8 @@ export const Spacing = {
   five: 32,
   six: 64,
 } as const;
+
+export const Radius = { sm: 10, md: 16, lg: 24, pill: 999 } as const;
 
 export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
 export const MaxContentWidth = 800;
